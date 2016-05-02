@@ -1,0 +1,43 @@
+<ion-view view-title="Einheitenumrechner">
+  <ion-content class="padding">
+
+    <div>
+
+    <label class="item item-input">
+      <span class="input-label">Eingabe</span>
+      <input type="number">
+    </label>
+
+    </div>
+    <div class="list">
+
+      <label class="item item-input item-select">
+        <div class="input-label">
+          Von
+        </div>
+        <select>
+          <option>Meter</option>
+          <option selected>Kilometer</option>
+          <option>Centimeter</option>
+        </select>
+      </label>
+
+      <label class="item item-input item-select">
+        <div class="input-label">
+          Zu
+        </div>
+        <select>
+          <option>Inch</option>
+          <option selected>Foot</option>
+          <option>Mile</option>
+        </select>
+      </label>
+
+    </div>
+
+    <button class="button button-dark" onclick="calculate()">
+      Berechnen
+    </button>
+
+  </ion-content>
+</ion-view>
