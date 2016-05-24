@@ -21,6 +21,14 @@ angular.module('starter.controllers', [])
   $scope.chat = Chats.get($stateParams.chatId);
 })
 
+
+.controller('ERechnerCtrl', function($scope, $stateParams) {
+  $scope.model = {};
+  $scope.berechnen = function() {
+    $scope.model.ausgabe = $scope.model.eingabe * 2;
+  };
+})
+
 .controller('AccountCtrl', function($scope) {
   $scope.settings = {
     enableFriends: true
