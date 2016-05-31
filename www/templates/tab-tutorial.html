@@ -1,0 +1,73 @@
+<link href="css/style.css" rel="stylesheet">
+<script src="js/tutorial.js"></script>
+
+<!-- TODO: add animation based on time (e.g. after 1 second, the next screen of the tutorial will be shown)
+See here: https://docs.angularjs.org/api/ngAnimate/service/$animateCss -->
+<!-- TODO: ÜBERSPRINGEN and WEITER don't do anything yet -->
+
+<!-- app tutorial -->
+<!-- <script id="templates/intro.html" type="text/ng-template"> -->
+<ion-view view-title="Tutorial">
+  <ion-nav-buttons side="left">
+    <button class="button button-positive button-clear no-animation"
+            ng-click="startApp()" ng-show="!slideIndex">
+      Überspringen
+    </button>
+    <button class="button button-positive button-clear no-animation"
+            ng-click="previous()" ng-show="slideIndex > 0">
+      Zurück
+    </button>
+  </ion-nav-buttons>
+  <ion-nav-buttons side="right">
+    <button class="button button-positive button-clear no-animation"
+            ng-click="next()" ng-show="slideIndex != 2">
+      Weiter
+    </button>
+    <button class="button button-positive button-clear no-animation"
+            ng-click="startApp()" ng-show="slideIndex == 2">
+      Start using MyApp
+    </button>
+  </ion-nav-buttons>
+  <ion-slide-box on-slide-changed="slideChanged(index)">
+    <ion-slide>
+      <h3>Danke, dass du unsere App verwendest!</h3>
+      <div id="logo">
+        <img src="http://code.ionicframework.com/assets/img/app_icon.png">
+      </div>
+      <p>
+        Bist du vor Kurzem in die Staaten gezogen und hast Mühe mit den komischen Masseinheiten?
+      </p>
+      <p>
+        Mit unserer App ist das Umrechnen ein Kinderspiel!
+      </p>
+    </ion-slide>
+    <ion-slide>
+      <h3>So funktionierts</h3>
+
+        <h4>3 einfache Schritte:</h4>
+      <div id="list">
+        <ol>
+          <li>Gewünschte Einheit wählen</li>
+          <li>Wert eingeben</li>
+          <li>Ausrechnen!</li>
+        </ol>
+      </div>
+
+    </ion-slide>
+    <ion-slide>
+      <h3>Viel Spass!</h3>
+      <p>
+        Take care!
+      </p>
+    </ion-slide>
+  </ion-slide-box>
+</ion-view>
+
+<!-- <script id="templates/main.html" type="text/ng-template">
+  <ion-view hide-back-button="true" view-title="Awesome">
+    <ion-content class="padding">
+      <h1>Main app here</h1>
+      <button class="button" ng-click="toIntro()">Tutorial wiederholen</button>
+    </ion-content>
+  </ion-view>
+</script> -->
