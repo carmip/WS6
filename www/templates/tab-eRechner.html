@@ -1,7 +1,8 @@
 <ion-view view-title="Einheitenumrechner">
+
   <ion-content class="padding">
 
-    <div>
+    <div class="list card">
 
       <label class="item item-input">
         <span class="input-label" id="eingabe">Eingabe</span>
@@ -9,7 +10,7 @@
       </label>
 
     </div>
-    <div class="list">
+    <div class="list card">
 
       <label class="item item-input item-select">
         <div class="input-label">
@@ -37,18 +38,16 @@
 
     <div>
 
-      <button class="button button-dark" ng-click="berechnen()">
+      <button class="button button-calm button-block" ng-click="berechnen()">
         Berechnen
       </button>
     </div>
-    <div>
+    <div class="list card">
       <label class="item item-output">
         <span class="output-label" id="ausgabe">Ausgabe</span>
         <input type="number" ng-model="model.ausgabe">
       </label>
     </div>
-
-
 
   </ion-content>
 </ion-view>

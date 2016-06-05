@@ -1,17 +1,36 @@
 /* Empty. Add your own CSS if you like */
 
-/* - - - - - - - - - - - TUTORIAL - - - - - - - - - - - */
+
+* {
+font-family: Roboto, Helvetica, sans-serif;
+}
 
 body {
   cursor: url('http://ionicframework.com/img/finger.png'), auto;
 }
+
+/* - - - - - - - - - - - UNITS - - - - - - - - - - - */
+.button {
+  margin: auto;
+  background-color: #006600;
+}
+
+
+.button-dark {
+  background-color: #ff8772;
+}
+
+
+
+/* - - - - - - - - - - - UNITS END - - - - - - - - - - - */
+
+/* - - - - - - - - - - - TUTORIAL  - - - - - - - - - - - */
 
 .slider {
   height: 100%;
 }
 
 .slider-slide {
-  padding-top: 80px;
   color: #000;
   background-color: #fff;
   text-align: center;
@@ -22,9 +41,8 @@ body {
 }
 
 #list {
-  width: 160px;
+  width: auto;
   margin: auto;
-  padding-top: 50px font-size : 20 px;
 }
 
 #list ol li {
@@ -33,8 +51,25 @@ body {
   margin: auto;
 }
 
+#list ul {
+  padding-top: 20px;
+}
+
 .button.ng-hide {
   display: none;
+}
+
+ion-slide div.card {
+  width: 95%;
+  align-items: center;
+}
+
+div.scroll {
+  height: 370px;
+}
+
+.have-fun {
+  padding-top: 80px;
 }
 
 /* - - - - - - - - - - - TUTORIAL END - - - - - - - - - - - */
