@@ -9,20 +9,7 @@ body {
   cursor: url('http://ionicframework.com/img/finger.png'), auto;
 }
 
-/* - - - - - - - - - - - UNITS - - - - - - - - - - - */
-.button {
-  margin: auto;
-  background-color: #006600;
-}
 
-
-.button-dark {
-  background-color: #ff8772;
-}
-
-
-
-/* - - - - - - - - - - - UNITS END - - - - - - - - - - - */
 
 /* - - - - - - - - - - - TUTORIAL  - - - - - - - - - - - */
 
