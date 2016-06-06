@@ -1,6 +1,3 @@
-<link href="css/style.css" rel="stylesheet">
-<script src="js/tutorial.js"></script>
-
 <!-- TODO: add animation based on time (e.g. after 1 second, the next screen of the tutorial will be shown)
 See here: https://docs.angularjs.org/api/ngAnimate/service/$animateCss -->
 <!-- TODO: ÜBERSPRINGEN and WEITER don't do anything yet -->
@@ -8,60 +5,55 @@ See here: https://docs.angularjs.org/api/ngAnimate/service/$animateCss -->
 <!-- app tutorial -->
 <!-- <script id="templates/intro.html" type="text/ng-template"> -->
 <ion-view view-title="Tutorial">
-  <ion-nav-buttons side="left">
-    <button class="button button-positive button-clear no-animation"
-            ng-click="startApp()" ng-show="!slideIndex">
-      Überspringen
-    </button>
-    <button class="button button-positive button-clear no-animation"
-            ng-click="previous()" ng-show="slideIndex > 0">
-      Zurück
-    </button>
-  </ion-nav-buttons>
-  <ion-nav-buttons side="right">
-    <button class="button button-positive button-clear no-animation"
-            ng-click="next()" ng-show="slideIndex != 2">
-      Weiter
-    </button>
-    <button class="button button-positive button-clear no-animation"
-            ng-click="startApp()" ng-show="slideIndex == 2">
-      Start using MyApp
-    </button>
-  </ion-nav-buttons>
-  <ion-slide-box on-slide-changed="slideChanged(index)">
-    <ion-slide>
-      <h3>Danke, dass du unsere App verwendest!</h3>
-      <div id="logo">
-        <img src="http://code.ionicframework.com/assets/img/app_icon.png">
-      </div>
-      <p>
-        Bist du vor Kurzem in die Staaten gezogen und hast Mühe mit den komischen Masseinheiten?
-      </p>
-      <p>
-        Mit unserer App ist das Umrechnen ein Kinderspiel!
-      </p>
-    </ion-slide>
-    <ion-slide>
-      <h3>So funktionierts</h3>
+    <ion-content class="padding">
 
-        <h4>3 einfache Schritte:</h4>
-      <div id="list">
-        <ol>
-          <li>Gewünschte Einheit wählen</li>
-          <li>Wert eingeben</li>
-          <li>Ausrechnen!</li>
-        </ol>
-      </div>
+        <ion-slide-box on-slide-changed="slideChanged(index)" class="card">
+            <ion-slide>
+                <div class="item item-divider">
+                    Danke, dass du unsere App verwendest!
+                </div>
+                <div id="logo">
+                    <img src="http://code.ionicframework.com/assets/img/app_icon.png">
+                </div>
+                <div><p>
+                    Bist du vor Kurzem in die Staaten gezogen und hast Mühe mit den komischen Masseinheiten?
+                </p>
 
-    </ion-slide>
-    <ion-slide>
-      <h3>Viel Spass!</h3>
-      <p>
-        Take care!
-      </p>
-    </ion-slide>
-  </ion-slide-box>
+                    <p>
+                        Mit unserer App ist das Umrechnen ein Kinderspiel!
+                    </p>
+                </div>
+            </ion-slide>
+
+
+            <ion-slide>
+                <div class="item item-divider">
+                    So funktionierts:
+                </div>
+
+                <div id="list">
+                    <ul>
+                        <li><p>Schritt 1: Gewünschte Einheit wählen</p></li>
+                        <li><p>Schritt 2: Wert eingeben</p></li>
+                        <li><p>Schritt 3: Ausrechnen!</p></li>
+                    </ul>
+                </div>
+            </ion-slide>
+
+
+            <ion-slide>
+                <div class="have-fun">
+                <h3>Viel Spass!</h3>
+
+                <p>
+                    Take care!
+                </p>
+                </div>
+            </ion-slide>
+        </ion-slide-box>
+    </ion-content>
 </ion-view>
+
 
 <!-- <script id="templates/main.html" type="text/ng-template">
   <ion-view hide-back-button="true" view-title="Awesome">

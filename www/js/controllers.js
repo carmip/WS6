@@ -26,7 +26,57 @@ angular.module('starter.controllers', [])
   .controller('ERechnerCtrl', function ($scope, $stateParams) {
     $scope.model = {};
     $scope.berechnen = function () {
-      $scope.model.ausgabe = $scope.model.eingabe * 2;
+
+      var from = document.getElementById("from");
+      var strFrom = from.options[from.selectedIndex].text;
+
+      var to = document.getElementById("to");
+      var strTo = to.options[to.selectedIndex].text;
+
+      if ((strFrom == 'Kilometer') && (strTo == 'Mile')) {
+        $scope.model.ausgabe = $scope.model.eingabe * 0.621371;
+      }
+
+      else if
+        ((strFrom == 'Kilometer') && (strTo == 'Foot')) {
+        $scope.model.ausgabe = $scope.model.eingabe * 3280.84;
+      }
+
+      else if
+      ((strFrom == 'Kilometer') && (strTo == 'Inch')) {
+        $scope.model.ausgabe = $scope.model.eingabe * 39370.1;
+      }
+
+      else if
+      ((strFrom == 'Meter') && (strTo == 'Mile')) {
+        $scope.model.ausgabe = $scope.model.eingabe * 0.000621371;
+      }
+
+      else if
+      ((strFrom == 'Meter') && (strTo == 'Foot')) {
+        $scope.model.ausgabe = $scope.model.eingabe * 3.28084;
+      }
+
+      else if
+      ((strFrom == 'Meter') && (strTo == 'Inch')) {
+        $scope.model.ausgabe = $scope.model.eingabe * 39.3701;
+      }
+      else if
+      ((strFrom == 'Centimeter') && (strTo == 'Mile')) {
+        $scope.model.ausgabe = $scope.model.eingabe * 0.0000062137;
+      }
+
+      else if
+      ((strFrom == 'Centimeter') && (strTo == 'Foot')) {
+        $scope.model.ausgabe = $scope.model.eingabe * 0.0328084;
+      }
+
+      else if
+      ((strFrom == 'Centimeter') && (strTo == 'Inch')) {
+        $scope.model.ausgabe = $scope.model.eingabe * 0.393701;
+      }
+
+
     };
   })
 
