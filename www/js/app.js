@@ -55,7 +55,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         views: {
           'tab-currencies': {
             templateUrl: 'templates/tab-wRechner.html',
-            controller: 'TutsCtrl'
+            controller: 'WRechnerCtrl'
           }
         }
       })

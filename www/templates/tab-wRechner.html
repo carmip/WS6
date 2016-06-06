@@ -1,7 +1,52 @@
-<ion-view view-title="Währungsrechner">
+<ion-view view-title="Währungsumrechner">
+
   <ion-content class="padding">
-   <p>
-     Muss noch implementiert werden. Hier würden wir die Kurse direkt von Google abrufen.
-   </p>
+
+    <div class="list card">
+      <label class="item item-input">
+        <span class="input-label" id="eingabe">Betrag</span>
+        <input type="number" ng-model="model.eingabe">
+      </label>
+    </div>
+
+    <div class="list card">
+
+      <label class="item item-input item-select">
+        <div class="input-label">
+          Ausgangswährung
+        </div>
+        <select id="fromCurr">
+          <option>USD</option>
+          <option selected>CHF</option>
+          <option>EUR</option>
+        </select>
+      </label>
+
+      <label class="item item-input item-select">
+        <div class="input-label">
+          Zielwährung
+        </div>
+        <select id="toCurr">
+          <option selected>USD</option>
+          <option>CHF</option>
+          <option>EUR</option>
+        </select>
+      </label>
+
+    </div>
+
+    <div>
+      <button class="button button-balanced button-block" ng-click="berechnen()">
+        Umwandeln
+      </button>
+    </div>
+
+    <div class="list card">
+      <label class="item item-output">
+        <span class="output-label" id="ausgabe">Ausgabe</span>
+        <input type="number" ng-model="model.ausgabe" readonly>
+      </label>
+    </div>
+
   </ion-content>
 </ion-view>

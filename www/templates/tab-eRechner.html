@@ -3,13 +3,12 @@
   <ion-content class="padding">
 
     <div class="list card">
-
       <label class="item item-input">
         <span class="input-label" id="eingabe">Eingabe</span>
         <input type="number" ng-model="model.eingabe">
       </label>
-
     </div>
+
     <div class="list card">
 
       <label class="item item-input item-select">
@@ -17,7 +16,7 @@
           Von
         </div>
         <select id="from">
-          <option >Meter</option>
+          <option>Meter</option>
           <option selected>Kilometer</option>
           <option>Centimeter</option>
         </select>
@@ -29,19 +28,19 @@
         </div>
         <select id="to">
           <option>Inch</option>
-          <option selected>Foot</option>
-          <option id="mile">Mile</option>
+          <option>Foot</option>
+          <option selected>Mile</option>
         </select>
       </label>
 
     </div>
 
     <div>
-
       <button class="button button-calm button-block" ng-click="berechnen()">
         Berechnen
       </button>
     </div>
+
     <div class="list card">
       <label class="item item-output">
         <span class="output-label" id="ausgabe">Ausgabe</span>
